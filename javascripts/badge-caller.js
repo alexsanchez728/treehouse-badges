@@ -2,16 +2,17 @@
 
 let dom = require("./dom");
 
-let personInfo = {};
+let personBadges = {};
 
 $.ajax("https://teamtreehouse.com/alexsanchez9.json").done((data) => {
-	personInfo = data.badges;
-	console.log(personInfo);
-	dom.domBuilder(personInfo);
-	// getBadges();
+	personBadges = data.badges;
+	dom.domBuilder(personBadges);
 }).fail((error) => {
 	console.log(error);
 });
 
+const grabBadges = () => {
+	return personBadges;
+};
 
-module.exports = {};
+module.exports = {grabBadges};
