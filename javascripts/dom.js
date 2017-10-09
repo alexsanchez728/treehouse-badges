@@ -2,7 +2,6 @@
 
 const domBuilder = (badgesArray) => {
 	let domString = "";
-	// badgesArray.forEach((iconImage) => {
 		for (let i=0; i < badgesArray.length; i++) {
 		domString+= 	`<div class="badge-card col-sm-3 animated infinite pulse">`;
 		domString+= 		`<div class="image-container text-center">`;

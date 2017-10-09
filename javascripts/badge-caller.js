@@ -2,7 +2,7 @@
 
 let dom = require("./dom");
 
-let personBadges = {};
+let personBadges = [];
 
 $.ajax("https://teamtreehouse.com/alexsanchez9.json").done((data) => {
 	personBadges = data.badges;
